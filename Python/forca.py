@@ -27,15 +27,15 @@ def jogar():
                 index = index + 1
         else:
             erros = erros + 1
-            print(erros)
+            desenha_forca(erros)
         enforcou = erros == 7
         acertou = "_" not in letras_acertadas
         print(letras_acertadas)
         
     if(acertou):
-        print("Você ganhou!!")
+        imprime_mensagem_vencedor()
     else:
-        print("Você perdeu!!")
+        imprime_mensagem_perdedor(palavra_secreta)
     print("Fim do jogo")
 
 def bem_vindo():

@@ -30,3 +30,5 @@ elif(operador == "^"):
 
 else:
     print("Operador invalido!")
+    
+    #Ola Gabriel

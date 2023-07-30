@@ -11,13 +11,13 @@ class Conta:
         
     def sacar(self, valor):
         self.saldo -= valor
-        print("O saldo atualizado da conta é de R${}".format(self.saldo))
+        print("O saldo atualizado da conta de {} é de R${}".format(self.titular, self.saldo))
         
     def depositar(self, valor):
         self.saldo += valor
-        print("O saldo atualizado da conta é de R${}".format(self.saldo))    
+        print("O saldo atualizado da conta de {} é de R${}".format(self.titular, self.saldo))
     
     def transferir(self, valor, origem, destino):
         origem.sacar(valor)
-        destino.depoistar(valor)
+        destino.depositar(valor)
         

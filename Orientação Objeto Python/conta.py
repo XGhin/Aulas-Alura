@@ -17,7 +17,6 @@ class Conta:
         self.saldo += valor
         print("O saldo atualizado da conta de {} é de R${}".format(self.titular, self.saldo))
     
-    def transferir(self, valor, origem, destino):
-        origem.sacar(valor)
+    def transferir(self, valor, destino):
+        self.sacar(valor)
         destino.depositar(valor)
-        

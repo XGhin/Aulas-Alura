@@ -9,9 +9,15 @@ class Conta:
     def extrato(self):
         print("O extrato da conta {} (Titular: {}) é R${}".format(self.__numero, self.__titular, self.__saldo))
 
+    def __pode_sacar(self, valor_a_sacar):
+        valor_disponivel = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel
     def sacar(self, valor):
-        self.__saldo -= valor
-        print("O saldo atualizado da conta de {} é de R${}".format(self.__titular, self.__saldo))
+        if (self.__pode_sacar(valor)):
+            self.__saldo -= valor
+            print("O saldo atualizado da conta de {} é de R${}".format(self.__titular, self.__saldo))
+        else:
+            print("saldo insuficiente para sacar R${}".format(valor))
 
     def depositar(self, valor):
         self.__saldo += valor
@@ -40,3 +46,8 @@ class Conta:
     @limite.setter
     def limite(self, limite):
         self.__limite = limite
+
+    @staticmethod
+    def codigo_banco():
+        return {'BB': '001', 'Caixa': '104', 'Bradesco':'237'}
+

@@ -5,7 +5,6 @@ class Conta:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
-        self.__saldo_disponivel = saldo + limite
 
     def extrato(self):
         print("O extrato da conta {} (Titular: {}) é R${}".format(self.__numero, self.__titular, self.__saldo))
@@ -28,6 +27,11 @@ class Conta:
         else:
             print("A conta de origem não possui credito suficiente!")    
 
+    @property
+    def saldo_disponivel(self):
+        self.__saldo_disponivel = self.__saldo + self.__limite
+        return self.__saldo_disponivel
+                    
     @property
     def saldo(self):
         return self.__saldo

@@ -8,22 +8,33 @@ def somar():
     n2 = int(input("Digite o segundo valor: "))
     print("O resultado da soma foi: {}".format(n1+n2))
 
-def somar():
+def subtrair():
     n1 = int(input("Digite o primeiro valor: "))
     n2 = int(input("Digite o segundo valor: "))
-    print("
+    print("O resultado da subtração foi: {}".format(n1-n2))
 
-def somar():
+def multiplicar():
     n1 = int(input("Digite o primeiro valor: "))
     n2 = int(input("Digite o segundo valor: "))
-    print("O resultado da soma foi: {}".format(n1+n2))
+    print("O resultado da multiplicação foi: {}".format(n1*n2))
 
-def somar():
+def dividir():
     n1 = int(input("Digite o primeiro valor: "))
     n2 = int(input("Digite o segundo valor: "))
-    print("O resultado da soma foi: {}".format(n1+n2))
+    print("O resultado da divisão foi: {}".format(n1/n2))
 
-def somar():
+def potencia():
     n1 = int(input("Digite o primeiro valor: "))
     n2 = int(input("Digite o segundo valor: "))
-    print("O resultado da soma foi: {}".format(n1+n2))
+    print("O resultado da potencia foi: {}".format(n1**n2))
+
+if (operador == "+"):
+    somar()
+elif (operador == "-"):
+    subtrair()
+elif (operador == "*"):
+    multiplicar()
+elif (operador == "/"):
+    dividir()
+elif (operador == "^"):
+    potencia()

@@ -10,3 +10,5 @@ def depositar(conta, valor):
 
 def extrato(conta):
     print("seu saldo é {}".format(conta["saldo"]))
+
+#teste

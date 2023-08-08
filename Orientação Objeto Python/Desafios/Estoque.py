@@ -19,5 +19,5 @@ class Estoque:
 
     @property
     def valor(self):
-        print("Item: {}\nValor: R${} Reais".format(self._item, self._valor))
+        print("Item: {}\nValor: R${:.2f} Reais".format(self._item, self._valor))
 
